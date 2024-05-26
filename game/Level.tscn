@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://65ty68h3h43t"]
+
+[ext_resource type="PackedScene" uid="uid://ds8tcjq1i7cio" path="res://game/Paddle.tscn" id="1_ugace"]
+[ext_resource type="PackedScene" uid="uid://dl8csect3s3pw" path="res://game/Wall.tscn" id="2_umbvx"]
+
+[node name="level" type="Node2D"]
+
+[node name="paddle" parent="." instance=ExtResource("1_ugace")]
+position = Vector2(580, 542)
+collision_mask = 3
+
+[node name="left_wall" parent="." instance=ExtResource("2_umbvx")]
+position = Vector2(15, 323)
+scale = Vector2(1, 20.2)
+collision_layer = 2
+
+[node name="right_wall" parent="." instance=ExtResource("2_umbvx")]
+position = Vector2(1136, 323)
+scale = Vector2(1, 20.2)
+collision_layer = 2

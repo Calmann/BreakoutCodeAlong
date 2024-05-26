@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl8csect3s3pw"]
+
+[ext_resource type="Texture2D" uid="uid://2rvctpav35x7" path="res://art/element_grey_square_glossy.png" id="1_2ohdc"]
+[ext_resource type="Script" path="res://game/Wall.cs" id="1_7ntiw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkpr5"]
+size = Vector2(32, 32)
+
+[node name="Wall" type="StaticBody2D"]
+script = ExtResource("1_7ntiw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_repeat = 2
+texture = ExtResource("1_2ohdc")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rkpr5")
